@@ -8,10 +8,10 @@ def post_issue
   url = Addressable::URI.new(
     scheme: "https",
     host: "api.github.com",
-    path: "/repos/greggawatt/drbronnersbot/issues"
-    ).to_s
+    path: "/repos/greggawatt/drbronnersbot/issues").to_s
     puts url
-    puts RestClient.post(url, { params: {:title => "test",
+    puts RestClient.post(url, { params: {:client_id => "",
+      :client_secret => "", :title => "test",
       :body => "test"}})
 end
 
